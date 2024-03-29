@@ -1,0 +1,1687 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+
+<head>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Hogo - Bootstrap 5 Premium Admin & Dashboard Template </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords" content="dashboard,admin,bootstrap template,bootstrap admin,template dashboard,admin dashboard bootstrap,bootstrap 5 admin template,html template,admin panel template,admin template bootstrap 5,html and css template,bootstrap dashboard,html dashboard,admin dashboard template,bootstrap admin dashboard">
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/assets/images/brand-logos/favicon.ico" type="image/x-icon">
+    <!-- Language Button -->
+    <link href="~/css/languagebutton.css" rel="stylesheet" />
+
+    <!-- Choices JS -->
+    <script src="~/assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+
+    <!-- Main Theme Js -->
+    <script src="~/assets/js/main.js"></script>
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="~/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style Css -->
+    <link href="~/assets/css/styles.min.css" rel="stylesheet">
+
+    <!-- Icons Css -->
+    <link href="~/assets/css/icons.css" rel="stylesheet">
+
+    <!-- Node Waves Css -->
+    <link href="~/assets/libs/node-waves/waves.min.css" rel="stylesheet">
+
+    <!-- Simplebar Css -->
+    <link href="~/assets/libs/simplebar/simplebar.min.css" rel="stylesheet">
+
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="~/assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="~/assets/libs/simonwep/pickr/themes/nano.min.css">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="~/assets/libs/choices.js/public/assets/styles/choices.min.css">
+
+
+    <link rel="stylesheet" href="~/assets/libs/apexcharts/apexcharts.css">
+
+
+    </head>
+<body>
+
+    <!-- Start Switcher -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title text-default" id="offcanvasRightLabel"> @_localization.GetKey("Ayarlar")</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav class="border-bottom border-block-end-dashed">
+                <div class="nav nav-tabs nav-justified" id="switcher-main-tab" role="tablist">
+                    <button class="nav-link active" id="switcher-home-tab" data-bs-toggle="tab" data-bs-target="#switcher-home"
+                            type="button" role="tab" aria-controls="switcher-home" aria-selected="true">
+                        @_localization.GetKey("Tema Ayarları")
+                    </button>
+                    <button class="nav-link" id="switcher-profile-tab" data-bs-toggle="tab" data-bs-target="#switcher-profile"
+                            type="button" role="tab" aria-controls="switcher-profile" aria-selected="false">
+                        @_localization.GetKey("Tema Renkleri")
+                    </button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active border-0" id="switcher-home" role="tabpanel" aria-labelledby="switcher-home-tab"
+                     tabindex="0">
+                    <div class="">
+                        <p class="switcher-style-head">@_localization.GetKey("Tema Sayfa Modu"):</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-light-theme">
+                                        @_localization.GetKey("Aydınlık")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                           checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-dark-theme">
+                                        @_localization.GetKey("Karanlık")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="switcher-style-head">Tema Yapısı:</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-ltr">
+                                        @_localization.GetKey("Soldan Sağa")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="direction" id="switcher-ltr" checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-rtl">
+                                        @_localization.GetKey("Sağdan Sola")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="direction" id="switcher-rtl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="switcher-style-head">Tema Yüzeyi:</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-vertical">
+                                        @_localization.GetKey("Dikey")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="navigation-style" id="switcher-vertical" checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-horizontal">
+                                        @_localization.GetKey("Yatay")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="navigation-style" id="switcher-horizontal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation-menu-styles">
+                        <p class="switcher-style-head">@_localization.GetKey("Dikey ve Yatay Menü Stilleri"):</p>
+                        <div class="row switcher-style gx-0 pb-2 gy-2">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-menu-click">
+                                        @_localization.GetKey("İşaretli Menü")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                           id="switcher-menu-click">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-menu-hover">
+                                        @_localization.GetKey("Vurgulu Menü")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                           id="switcher-menu-hover">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-icon-click">
+                                        @_localization.GetKey("İşaretli İkon")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                           id="switcher-icon-click">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-icon-hover">
+                                        @_localization.GetKey("Vurgulu İkon")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="navigation-menu-styles"
+                                           id="switcher-icon-hover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidemenu-layout-styles">
+                        <p class="switcher-style-head">@_localization.GetKey("Yan menü Stili"):</p>
+                        <div class="row switcher-style gx-0 pb-2 gy-2">
+                            <div class="col-sm-6">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-default-menu">
+                                        @_localization.GetKey("Klasik Menü")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                           id="switcher-default-menu" checked>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-closed-menu">
+                                        @_localization.GetKey("Kapalı Menü") 
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                           id="switcher-closed-menu">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-icontext-menu">
+                                        @_localization.GetKey("İkon Yazısı")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                           id="switcher-icontext-menu">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-icon-overlay">
+                                        @_localization.GetKey("İkon Kaplaması")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                           id="switcher-icon-overlay">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-detached">
+                                        @_localization.GetKey("Bağımsız")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                           id="switcher-detached">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-double-menu">
+                                        @_localization.GetKey("İkili Menü")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="sidemenu-layout-styles"
+                                           id="switcher-double-menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="switcher-style-head">@_localization.GetKey("Sayfa Stili"):</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-regular">
+                                        @_localization.GetKey("Genel")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="page-styles" id="switcher-regular"
+                                           checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-classic">
+                                        @_localization.GetKey("Klasik")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="page-styles" id="switcher-classic">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-modern">
+                                        @_localization.GetKey("Modern")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="page-styles" id="switcher-modern">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="switcher-style-head">@_localization.GetKey("Layout Genişliği Stilleri"):</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-full-width">
+                                        @_localization.GetKey("Çizgisiz Ekran")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="layout-width" id="switcher-full-width"
+                                           checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-boxed">
+                                        @_localization.GetKey("Çizgili Ekran")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="layout-width" id="switcher-boxed">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="switcher-style-head">@_localization.GetKey("Menü Pozisyonları"):</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-menu-fixed">
+                                        @_localization.GetKey("Sabit")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-fixed"
+                                           checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-menu-scroll">
+                                        @_localization.GetKey("Kaydırılabilir")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="menu-positions" id="switcher-menu-scroll">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="switcher-style-head">@_localization.GetKey("Başlık Pozisyonları"):</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-header-fixed">
+                                        @_localization.GetKey("Sabit")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="header-positions"
+                                           id="switcher-header-fixed" checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-header-scroll">
+                                        @_localization.GetKey("Kaydırılabilir")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="header-positions"
+                                           id="switcher-header-scroll">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="switcher-style-head">@_localization.GetKey("Yükleyici"):</p>
+                        <div class="row switcher-style gx-0">
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-loader-enable">
+                                        @_localization.GetKey("Açık")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="page-loader"
+                                           id="switcher-loader-enable" checked>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check switch-select">
+                                    <label class="form-check-label" for="switcher-loader-disable">
+                                        @_localization.GetKey("Kapalı")
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="page-loader"
+                                           id="switcher-loader-disable" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade border-0" id="switcher-profile" role="tabpanel" aria-labelledby="switcher-profile-tab" tabindex="0">
+                    <div>
+                        <div class="theme-colors">
+                            <p class="switcher-style-head">@_localization.GetKey("Menü Renkleri"):</p>
+                            <div class="d-flex switcher-style pb-2">
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Açık Menü") type="radio" name="menu-colors"
+                                           id="switcher-menu-light" checked>
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Kapalı Menü") type="radio" name="menu-colors"
+                                           id="switcher-menu-dark">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Renkli Menü") type="radio" name="menu-colors"
+                                           id="switcher-menu-primary">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Değişken Menü") type="radio" name="menu-colors"
+                                           id="switcher-menu-gradient">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-transparent"
+                                           data-bs-toggle="tooltip" data-bs-placement="top" title=@_localization.GetKey("Saydam Menü")
+                                           type="radio" name="menu-colors" id="switcher-menu-transparent">
+                                </div>
+                            </div>
+                            <div class="px-4 pb-3 text-muted fs-11">@_localization.GetKey("Not: Renk Menüsünü değiştirmek istiyorsanız, Temanın Ana renk seçicisinin altından dinamik olarak değiştirin")</div>
+                        </div>
+                        <div class="theme-colors">
+                            <p class="switcher-style-head">@_localization.GetKey("Başlık Renkleri"):</p>
+                            <div class="d-flex switcher-style pb-2">
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-white" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Açık Başlık") type="radio" name="header-colors"
+                                           id="switcher-header-light" checked>
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-dark" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Kapalı Başlık") type="radio" name="header-colors"
+                                           id="switcher-header-dark">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-primary" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Renkli Başlık") type="radio" name="header-colors"
+                                           id="switcher-header-primary">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-gradient" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Değişken Başlık") type="radio" name="header-colors"
+                                           id="switcher-header-gradient">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-transparent" data-bs-toggle="tooltip"
+                                           data-bs-placement="top" title=@_localization.GetKey("Saydam Başlık") type="radio" name="header-colors"
+                                           id="switcher-header-transparent">
+                                </div>
+                            </div>
+                            <div class="px-4 pb-3 text-muted fs-11">@_localization.GetKey("Not: Renk Başlığını değiştirmek istiyorsanız, Temanın Ana renk seçicisinin altından dinamik olarak değiştirin")</div>
+                        </div>
+                        <div class="theme-colors">
+                            <p class="switcher-style-head">@_localization.GetKey("Birincil Tema"):</p>
+                            <div class="d-flex flex-wrap align-items-center switcher-style">
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-primary-1" type="radio"
+                                           name="theme-primary" id="switcher-primary">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-primary-2" type="radio"
+                                           name="theme-primary" id="switcher-primary1">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                                           id="switcher-primary2">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                                           id="switcher-primary3">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                                           id="switcher-primary4">
+                                </div>
+                                <div class="form-check switch-select ps-0 mt-1 color-primary-light">
+                                    <div class="theme-container-primary"></div>
+                                    <div class="pickr-container-primary"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theme-colors">
+                            <p class="switcher-style-head">@_localization.GetKey("Tema Arkaplanı"):</p>
+                            <div class="d-flex flex-wrap align-items-center switcher-style">
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-bg-1" type="radio"
+                                           name="theme-background" id="switcher-background">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-bg-2" type="radio"
+                                           name="theme-background" id="switcher-background1">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-bg-3" type="radio" name="theme-background"
+                                           id="switcher-background2">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-bg-4" type="radio"
+                                           name="theme-background" id="switcher-background3">
+                                </div>
+                                <div class="form-check switch-select me-3">
+                                    <input class="form-check-input color-input color-bg-5" type="radio"
+                                           name="theme-background" id="switcher-background4">
+                                </div>
+                                <div class="form-check switch-select ps-0 mt-1 tooltip-static-demo color-bg-transparent">
+                                    <div class="theme-container-background"></div>
+                                    <div class="pickr-container-background"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-image mb-3">
+                            <p class="switcher-style-head">@_localization.GetKey("Menü ile Arkaplan Resmi")</p>
+                            <div class="d-flex flex-wrap align-items-center switcher-style">
+                                <div class="form-check switch-select m-2">
+                                    <input class="form-check-input bgimage-input bg-img1" type="radio"
+                                           name="theme-background" id="switcher-bg-img">
+                                </div>
+                                <div class="form-check switch-select m-2">
+                                    <input class="form-check-input bgimage-input bg-img2" type="radio"
+                                           name="theme-background" id="switcher-bg-img1">
+                                </div>
+                                <div class="form-check switch-select m-2">
+                                    <input class="form-check-input bgimage-input bg-img3" type="radio" name="theme-background"
+                                           id="switcher-bg-img2">
+                                </div>
+                                <div class="form-check switch-select m-2">
+                                    <input class="form-check-input bgimage-input bg-img4" type="radio"
+                                           name="theme-background" id="switcher-bg-img3">
+                                </div>
+                                <div class="form-check switch-select m-2">
+                                    <input class="form-check-input bgimage-input bg-img5" type="radio"
+                                           name="theme-background" id="switcher-bg-img4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-grid  canvas-footer flex-wrap">
+                    <a href="javascript:void(0);" id="reset-all" class="btn btn-danger m-1">@_localization.GetKey("Sıfırla")</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- End Switcher -->
+    <!-- Loader -->
+    <div id="loader">
+        <img src="~/assets/images/media/loader.svg" alt="">
+    </div>
+    <!-- Loader -->
+
+    <div class="page">
+        <!-- app-header -->
+        <header class="app-header">
+
+            <!-- Start::main-header-container -->
+            <div class="main-header-container container-fluid">
+
+                <!-- Start::header-content-left -->
+                <div class="header-content-left">
+
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="~/Dashboard/Index" class="header-logo">
+                                <img src="~/assets/images/brand-logos/lightlogo.png" alt="logo" class="desktop-logo">
+                                <img src="~/assets/images/brand-logos/smalllogo.png" alt="logo" class="toggle-logo">
+                                <img src="~/assets/images/brand-logos/lightlogo.png" alt="logo" class="desktop-dark">
+                                <img src="~/assets/images/brand-logos/smalllogo.png" alt="logo" class="toggle-dark">
+                                <img src="~/assets/images/brand-logos/darklogo.png" alt="logo" class="desktop-white">
+                                <img src="~/assets/images/brand-logos/smalllogo.png" alt="logo" class="toggle-white">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link -->
+                        <a aria-label="Hide Sidebar"
+                           class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle mx-0"
+                           data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element header-search">
+                        <!-- Start::header-link -->
+                        <div class="main-header-search ms-3 d-none d-lg-block my-auto">
+                            <input class="form-control" placeholder="@_localization.GetKey("Ara")..." type="search">
+                            <button class="btn"><i class="fe fe-search"></i></button>
+                        </div>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+                </div>
+                <!-- End::header-content-left -->
+                <!-- Start::header-content-right -->
+                <div class="header-content-right">
+                    <div class="header-element header-search  d-lg-none d-block">
+                        <!-- Start::header-link -->
+                        <a href="javascript:void(0);" class="header-link search-icon" id="searchButton">
+                            <i class="bx bx-search-alt-2 header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link -->
+                        <li class="nav-link ">
+                            <form class="navbar-form" role="search" id="myNavbarForm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder=@_localization.GetKey("Ara")>
+                                    <span class="input-group-btn">
+                                        <button type="reset" class="btn btn-default close-btn text-muted">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </li>
+                    </div>
+                    <!-- Start::header-element -->
+                    <div class="header-element country-selector">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                           data-bs-toggle="dropdown">
+                            <img src="~/assets/images/flags/Flag_of_Turkey.jpg" alt="img" class="rounded-circle">
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <div class="dropdown">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" asp-action="ChangeLanguage" asp-controller="Home" asp-route-culture="tr-TR">Türkçe</a>
+                                <a class="dropdown-item" asp-action="ChangeLanguage" asp-controller="Home" asp-route-culture="en-US">İngilizce</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element header-theme-mode">
+                        <!-- Start::header-link|layout-setting -->
+                        <a href="javascript:void(0);" class="header-link layout-setting">
+                            <span class="light-layout">
+                                <!-- Start::header-link-icon -->
+                                <i class="bx bx-moon  fe-moon header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                            <span class="dark-layout">
+                                <!-- Start::header-link-icon -->
+                                <i class="bx bx-sun header-link-icon"></i>
+                                <!-- End::header-link-icon -->
+                            </span>
+                        </a>
+                        <!-- End::header-link|layout-setting -->
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element header-fullscreen">
+                        <!-- Start::header-link -->
+                        <a onclick="openFullscreen();" href="javascript:void(0);" class="header-link">
+                            <i class="bx bx-fullscreen full-screen-open header-link-icon"></i>
+                            <i class="bx bx-exit-fullscreen full-screen-close header-link-icon d-none"></i>
+
+
+                            <!-- <box-icon name='exit-fullscreen'></box-icon> -->
+                        </a>
+                        <!-- End::header-link -->
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element meassage-dropdown">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                           data-bs-toggle="dropdown">
+                            <i class="bx bx-message-square-dots  header-link-icon"></i>
+                            <span class="pulse-danger"></span>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown dropdown-menu dropdown-menu-end overflow-hidden" data-popper-placement="none">
+                            <div class="p-3 bg-primary">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-500">@_localization.GetKey("Mesajlar")</p>
+                                    <span class="badge bg-success fw-normal rounded-pill" id="message-data">5 Unread</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <ul class="list-unstyled mb-0" id="header-notification-scroll1">
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <img src="~/assets/images/faces/1.jpg" alt="img" class="rounded-circle avatar">
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html">
+                                                        Gerninia<span class="text-muted fs-12 fw-normal ps-1">  6:45 am </span>
+                                                    </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">Commented on file Guest list....</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close3">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <img src="~/assets/images/faces/2.jpg" alt="img" class="rounded-circle avatar">
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html">
+                                                        Peter Theil<span class="text-muted fs-12 fw-normal ps-1"> 5 hours ago </span>
+                                                    </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">Brizid is in the Warehouse...</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close3">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <img src="~/assets/images/faces/3.jpg" alt="img" class="rounded-circle avatar">
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html">
+                                                        John vally<span class="text-muted fs-12 fw-normal ps-1">45 mintues ago </span>
+                                                    </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">New Product Realease......</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close3">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <img src="~/assets/images/faces/4.jpg" alt="img" class="rounded-circle avatar">
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html">
+                                                        Samonu Show<span class="text-muted fs-12 fw-normal ps-1">20 mintues ago </span>
+                                                    </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">New Meetup Started......</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close3">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <img src="~/assets/images/faces/2.jpg" alt="img" class="rounded-circle avatar">
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html">
+                                                        Senrio<span class="text-muted fs-12 fw-normal ps-1"> 10 hours ago </span>
+                                                    </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">
+                                                    New product
+                                                    Launching...
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close3">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class=" p-3 empty-header-item1 border-top dropdown-footer">
+                                <div class="d-grid">
+                                    <a href="chat.html" class="btn text-muted p-0 text-primary">@_localization.GetKey("Hepsini Gör")</a>
+                                </div>
+                            </div>
+                            <div class="p-5 empty-item1 d-none">
+                                <div class="text-center">
+                                    <span class="avatar avatar-xl avatar-rounded bg-primary-transparent">
+                                        <i class="ri-mail-close-line fs-2"></i>
+                                    </span>
+                                    <h6 class="fw-semibold mt-3">No New Messages</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element notifications-dropdown">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                           data-bs-toggle="dropdown">
+                            <i class="bx bx-bell  header-link-icon"></i>
+                            <span class="badge bg-secondary fw-normal rounded-pill cart-badge" id="notifiation-data">5</span>
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <!-- Start::main-header-dropdown -->
+                        <div class="main-header-dropdown dropdown-menu dropdown-menu-end overflow-hidden" data-popper-placement="none">
+                            <div class="p-3 bg-primary overflow-hidden">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fs-17 fw-500">@_localization.GetKey("Bildirimler")</p>
+                                    <span class="badge bg-success fw-normal rounded-pill">@_localization.GetKey("Hepsini Okundu İşaretle").</span>
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <ul class="list-unstyled mb-0" id="header-notification-scroll">
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <span class="avatar avatar-md bg-primary-transparent rounded-3">
+                                                <i class="bx bx-duplicate fs-18"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html"> Updates Available </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">2 days ago</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close2">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <span class="avatar avatar-md bg-danger-transparent rounded-3">
+                                                <i class="bx bx-folder-open fs-18"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html"> New files available </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text"> 10 hour ago </span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close2">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <span class="avatar avatar-md bg-success-transparent rounded-3">
+                                                <i class="bx bx-cart fs-18"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html"> New Order Received </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">1 hour ago</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close2">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <span class="avatar avatar-md bg-warning-transparent rounded-3">
+                                                <i class="bx bx-envelope fs-18"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html">
+                                                        New Updates
+                                                        available
+                                                    </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">
+                                                    1 day
+                                                    ago
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close2">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="d-flex align-items-start">
+                                        <div class="pe-2">
+                                            <span class="avatar avatar-md bg-danger-transparent rounded-3">
+                                                <i class="bx bx-file fs-18"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <p class="mb-0 fw-semibold">
+                                                    <a href="chat.html"> 2 verified registrations </a>
+                                                </p>
+                                                <span class="text-muted fw-normal fs-12 header-notification-text">2 hour ago</span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);"
+                                                   class="min-w-fit-content text-muted me-1 dropdown-item-close2">
+                                                    <i class="ti ti-x fs-16"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class=" p-3 empty-header-item2 border-top dropdown-footer">
+                                <div class="d-grid">
+                                    <a href="chat.html" class="btn text-muted p-0 text-primary">View all</a>
+                                </div>
+                            </div>
+                            <div class="p-5 empty-item2 d-none">
+                                <div class="text-center">
+                                    <span class="avatar avatar-xl avatar-rounded bg-secondary-transparent">
+                                        <i class="ri-notification-off-line fs-2"></i>
+                                    </span>
+                                    <h6 class="fw-semibold mt-3">No New Notifications</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End::main-header-dropdown -->
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element profile-1">
+                        <!-- Start::header-link|dropdown-toggle -->
+                        <a href="javascript:void(0);" class=" dropdown-toggle leading-none header-link d-flex justify-content-center" id="mainHeaderProfile"
+                           data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <img src="~/assets/images/faces/9.jpg" alt="img" width="32" height="32" class="rounded-circle">
+                            <!-- <div class="d-flex align-items-center">
+                            </div> -->
+                        </a>
+                        <!-- End::header-link|dropdown-toggle -->
+                        <div class="main-header-dropdown dropdown-menu dropdown-menu-end overflow-hidden profile-dropdown" data-popper-placement="none">
+                            <div class="main-header-profile bg-primary border-bottom p-3">
+                                <div class="d-flex wd-100p">
+                                    <div class="main-img-user">
+                                        <img alt="" src="~/assets/images/faces/9.jpg" class="avatar avatar-md">
+                                    </div>
+                                    <div class="ms-2 my-auto text-white">
+                                        <h6 class="mb-0 text-fixed-white">Ahmet Mehmet</h6>
+                                        <span class=" text-fixed-white op-7 fs-13">Ayrıcalıklı Üye</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="dropdown-item d-flex" href="profile.html"><i class="bx bx-user-circle fs-18  me-2"></i>@_localization.GetKey("Profil")</a>
+                            <a class="dropdown-item d-flex" href="editprofile.html"><i class="bx bx-cog  fs-18  me-2"></i> @_localization.GetKey("Profili Düzenle")</a>
+                            <a class="dropdown-item d-flex" href="email.html"><i class="bx bxs-inbox  fs-18  me-2"></i>@_localization.GetKey("Gelen Kutusu")</a>
+                            <a class="dropdown-item d-flex" href="settings.html"><i class="bx bx-slider-alt  fs-18  me-2"></i>@_localization.GetKey("Hesap Ayarları") </a>
+                            <a class="dropdown-item d-flex" href="signin.html"><i class="bx bx-log-out  fs-18  me-2"></i>@_localization.GetKey("Çıkış Yap")</a>
+                        </div>
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element  d-none d-sm-block">
+                        <!-- Start::header-link|switcher-icon -->
+                        <a href="javascript:void(0);" class="header-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvassidebar">
+                            <i class='bx bx-grid-alt header-link-icon'></i>
+                        </a>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+                    <!-- Start::header-element -->
+                    <div class="header-element">
+                        <!-- Start::header-link|switcher-icon -->
+                        <a href="javascript:void(0);" class="header-link me-0" data-bs-toggle="offcanvas"
+                           data-bs-target="#switcher-canvas">
+                            <i class="bx bx-cog header-link-icon"></i>
+                        </a>
+                        <!-- End::header-link|switcher-icon -->
+                    </div>
+                    <!-- End::header-element -->
+
+                </div>
+                <!-- End::header-content-right -->
+
+            </div>
+            <!-- End::main-header-container -->
+
+        </header>
+        <!-- /app-header -->
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <!-- Start::main-sidebar-header -->
+            <div class="main-sidebar-header">
+                <a href="~/Dashboard/Index" class="header-logo">
+                    <img src="~/assets/images/brand-logos/darklogo.png" alt="logo" class="desktop-logo">
+                    <img src="~/assets/images/brand-logos/smalllogo.png" alt="logo" class="toggle-logo">
+                    <img src="~/assets/images/brand-logos/lightlogo.png" alt="logo" class="desktop-dark">
+                    <img src="~/assets/images/brand-logos/smalllogo.png" alt="logo" class="toggle-dark">
+                    <img src="~/assets/images/brand-logos/darklogo.png" alt="logo" class="desktop-white">
+                    <img src="~/assets/images/brand-logos/smalllogo.png" alt="logo" class="toggle-white">
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+            <!-- Start::main-sidebar -->
+            <div class="main-sidebar" id="sidebar-scroll">
+
+                <!-- Start::nav -->
+                <nav class="main-menu-container nav nav-pills flex-column sub-open">
+                    <div class="slide-left" id="slide-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                        </svg>
+                    </div>
+                    <ul class="main-menu">
+                        <!-- Start::slide__category -->
+                        <li class="slide__category"><span class="category-name">@_localization.GetKey("Ana Sayfa")</span></li>
+                        <!-- End::slide__category -->
+                       <!-- Start::slide -->
+                        <li class="slide">
+                            <a href="~/dashboard/index" class="side-menu__item">
+                                <i class="bx bx-desktop side-menu__icon">&nbsp;&nbsp;</i>
+                                <span class="side-menu__label">@_localization.GetKey("Ana Sayfa")</span>
+                            </a>
+                        </li>
+                        <!-- End::slide -->
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bx bx-file side-menu__icon"></i>
+                                <span class="side-menu__label"> @_localization.GetKey("Gönderiler")</span>
+                                <i class="fe fe-chevron-down side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Menü Çoklu</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="~/Posts/Create" class="side-menu__item">Gönderi Ekle</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="~/Posts/Index" class="side-menu__item">Gönderi Güncelle</a>
+                                </li>
+                              
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bx bx-group  side-menu__icon"></i>
+                                <span class="side-menu__label"> @_localization.GetKey("Kullanıcılar")</span>
+                                <i class="fe fe-chevron-down side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Menü Çoklu</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="~/Users/Index" class="side-menu__item">Kullanıcıları Görüntüle</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bx bx-category  side-menu__icon"></i>
+                                <span class="side-menu__label">@_localization.GetKey("Kategoriler")</span>
+                                <i class="fe fe-chevron-down side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Menü Çoklu</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="~/Categories/Create" class="side-menu__item">Kategori Ekle</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="~/Categories/Index" class="side-menu__item">Kategori Güncelle</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bx bx-tag side-menu__icon"></i>
+                                <span class="side-menu__label">@_localization.GetKey("Etiketler")</span>
+                                <i class="fe fe-chevron-down side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Menü Çoklu</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="~/Tags/Create" class="side-menu__item">Etiket Ekle</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="~/Tags/Index" class="side-menu__item">Etiket Güncelle</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+                       
+                    <div class="slide-right" id="slide-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24"
+                             height="24" viewBox="0 0 24 24">
+                            <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path>
+                        </svg>
+                    </div>
+                </nav>
+                <!-- End::nav -->
+
+            </div>
+            <!-- End::main-sidebar -->
+
+        </aside>
+        <!-- End::app-sidebar -->
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+
+
+
+            
+            <div class="container-fluid">
+
+                <!-- page-header -->
+                <!-- Page Header -->
+                <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
+                    <div class="">
+                        <div class="">
+                            <nav>
+                                <ol class="breadcrumb mb-1 mb-md-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">@_localization.GetKey("Ana Sayfa")</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">@_localization.GetKey("Ana Ekran") </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="ms-auto pageheader-btn">
+                    </div>
+                </div>
+                <!-- Page Header Close -->
+                @RenderBody()
+
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+        <!-- Footer Start -->
+        <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted">
+                    Copyright © <span id="year"></span> <a href="javascript:void(0);" class="text-primary fw-semibold">Deneme</a>
+                </span>
+            </div>
+        </footer>
+        <!-- Footer End -->
+        <div class="offcanvas offcanvas-end offcanvas-sidebar overflow-auto sidebar" tabindex="-1" id="offcanvassidebar">
+            <!-- Sidebar-right -->
+            <div class="card custom-card tab-heading shadow-none">
+                <div class="card-header rounded-0">
+                    <div class="card-title">
+                        @_localization.GetKey("Bildirimler")
+                    </div>
+                    <div class="card-options ms-auto" data-bs-theme="dark">
+                        <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="panel-body tabs-menu-body latest-tasks p-0 border-0">
+                    <div class="tabs-menu">
+                        <!-- Tabs -->
+                        <ul class="nav panel-tabs">
+                            <li class="">
+                                <a href="#side1" class="active" data-bs-toggle="tab">
+                                    <i class="fe fe-message-circle tx-15 me-2"></i@_localization.GetKey("Mesajlar")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#side2" data-bs-toggle="tab">
+                                    <i class="fe fe-bell tx-15 me-2"></i>
+                                    @_localization.GetKey("Bildirimler")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#side3" data-bs-toggle="tab"><i class="fe fe-users tx-15 me-2"></i> @_localization.GetKey("Arkadaşlar")</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane p-0 active border-0" id="side1">
+                            <div class="list d-flex align-items-center border-top border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-primary brround avatar-md">CH</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>New Websites is Created</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">30 mins ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center  border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-danger brround avatar-md">N</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>Prepare For the Next Project</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">2 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-info brround avatar-md">S</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>Decide the live Discussion</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">3 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-warning brround avatar-md">K</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>Meeting at 3:00 pm</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">4 hours ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-success brround avatar-md">R</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">1 day ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-pink brround avatar-md">MS</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">1 day ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center border-bottom p-3">
+                                <div class="">
+                                    <span class="avatar bg-purple brround avatar-md">L</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">45 minutes ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list d-flex align-items-center p-3">
+                                <div class="">
+                                    <span class="avatar bg-blue brround avatar-md">U</span>
+                                </div>
+                                <a class="wrapper w-100 ms-3" href="javascript:void(0);">
+                                    <p class="mb-0 d-flex">
+                                        <b>Prepare for Presentation</b>
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center">
+                                            <i class="mdi mdi-clock text-muted me-1"></i>
+                                            <small class="text-muted ms-auto">2 days ago</small>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tab-pane p-0" id="side2">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item d-flex align-items-center ">
+                                    <div>
+                                        <span class="avatar avatar-lg me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/13.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <strong>Madeleine</strong> Hey! there I' am available....
+                                        <div class="small text-muted">3 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-lg me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/12.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <strong>Anthony</strong> New product Launching...
+                                        <div class="small text-muted">5 hour ago</div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-lg me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/11.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <strong>Olivia</strong> New Schedule Realease......
+                                        <div class="small text-muted">45 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-lg me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/10.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <strong>Madeleine</strong> Hey! there I' am available....
+                                        <div class="small text-muted">3 hours ago</div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-lg me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/19.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <strong>Anthony</strong> New product Launching...
+                                        <div class="small text-muted">5 hour ago</div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-lg me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/8.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <strong>Olivia</strong> New Schedule Realease......
+                                        <div class="small text-muted">45 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-lg me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/7.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-3">
+                                        <strong>Olivia</strong> Hey! there I' am available....
+                                        <div class="small text-muted">12 minutes ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane p-0" id="side3">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item d-flex align-items-center ">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/13.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Mozelle Belt
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/3.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Florinda Carasco
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/2.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Alina Bernier
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/1.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Zula Mclaughin
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/5.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Isidro Heide
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/6.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Mozelle Belt
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary ">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/7.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Florinda Carasco
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/8.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Alina Bernier
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light  text-primary">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/9.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Zula Mclaughin
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/10.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Isidro Heide
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light  text-primary">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/12.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Florinda Carasco
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                                <div class="list-group-item d-flex align-items-center border-top">
+                                    <div>
+                                        <span class="avatar avatar-md me-2 online avatar-rounded">
+                                            <img src="~/assets/images/faces/14.jpg" alt="img">
+                                        </span>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="fw-semibold" data-bs-toggle="modal" data-bs-target="#chatmodel">
+                                            Alina Bernier
+                                        </div>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-light text-primary " data-bs-toggle="modal"
+                                           data-bs-target="#chatmodel"><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Sidebar-right-->
+        </div>
+
+<link href="~/css/languagebutton.css" rel="stylesheet" />
+    </div>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+    <!-- Scroll To Top -->
+    <div class="scrollToTop" id="back-to-top">
+        <i class="ri-arrow-up-s-fill fs-20"></i>
+    </div>
+    <div id="responsive-overlay"></div>
+    <!-- Scroll To Top -->
+    <!-- Popper JS -->
+    <script src="~/assets/libs/popperjs/core/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Defaultmenu JS -->
+    <script src="~/assets/js/defaultmenu.min.js"></script>
+
+    <!-- Node Waves JS-->
+    <script src="~/assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- Sticky JS -->
+    <script src="~/assets/js/sticky.js"></script>
+
+    <!-- Simplebar JS -->
+    <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="~/assets/js/simplebar.js"></script>
+
+    <!-- Color Picker JS -->
+    <script src="~/assets/libs/simonwep/pickr/pickr.es5.min.js"></script>
+
+    <!-- Date & Time Picker JS -->
+    <script src="~/assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="~/assets/js/date-range.js"></script>
+
+
+    <!-- Apex Charts JS -->
+    <script src="~/assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script src="~/assets/js/index3.js"></script>
+
+
+    <!-- Custom-Switcher JS -->
+    <script src="~/assets/js/custom-switcher.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/assets/js/custom.js"></script>
+</body>
+</html>

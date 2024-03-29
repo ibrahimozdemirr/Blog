@@ -1,0 +1,59 @@
+﻿@model EntityLayer.Entity.Comments
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Comments</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CommentWritername" class="control-label"></label>
+                <input asp-for="CommentWritername" class="form-control" />
+                <span asp-validation-for="CommentWritername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CommentDescription" class="control-label"></label>
+                <input asp-for="CommentDescription" class="form-control" />
+                <span asp-validation-for="CommentDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CommentPhoto" class="control-label"></label>
+                <input asp-for="CommentPhoto" class="form-control" />
+                <span asp-validation-for="CommentPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CommentDate" class="control-label"></label>
+                <input asp-for="CommentDate" class="form-control" />
+                <span asp-validation-for="CommentDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CommentIsActive" /> @Html.DisplayNameFor(model => model.CommentIsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="userId" class="control-label"></label>
+                <select asp-for="userId" class ="form-control" asp-items="ViewBag.userId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="postId" class="control-label"></label>
+                <select asp-for="postId" class ="form-control" asp-items="ViewBag.postId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

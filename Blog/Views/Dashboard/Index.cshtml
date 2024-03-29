@@ -1,0 +1,238 @@
+﻿
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="row">
+	<div class="col-xl-12">
+		<div class="card custom-card">
+			<div class="card-header justify-content-between">
+				@* <p>Hoş geldin @HttpContextAccessor.HttpContext.Session.GetString("userName"); </p> *@
+				<div class="card-title">
+					@_localization.GetKey("Gönderi Açıklamaları")
+				</div>
+				<div class="btn-group btn-sm">
+					<button type="button" class="btn btn-light btn-sm">
+						<span class="">@_localization.GetKey("Gün")</span>
+					</button>
+					<button type="button" class="btn btn-light btn-sm">
+						<span class="">@_localization.GetKey("Ay")</span>
+					</button>
+					<button type="button" class="btn btn-light btn-sm">
+						<span class="">@_localization.GetKey("Yıl")</span>
+					</button>
+				</div>
+
+			</div>
+			<div class="card-body">
+				<div class="d-sm-flex mb-4 justify-content-between">
+					<div>
+						<span class="">@_localization.GetKey("Göster")</span>
+						<div class="btn-group">
+							<button type="button" class="btn btn-outline-light dropdown-toggle btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
+								10
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="javascript:void(0);">10</a></li>
+								<li><a class="dropdown-item" href="javascript:void(0);">25</a></li>
+								<li><a class="dropdown-item" href="javascript:void(0);">50</a></li>
+							</ul>
+						</div>
+						<span class="">@_localization.GetKey("Girişler")</span>
+					</div>
+					<div class="d-flex gap-2 mt-1 mt-sm-0">
+						<div>
+							<input class="form-control form-control-sm" type="text" placeholder=@_localization.GetKey("Buradan Ara") aria-label=".form-control-sm example">
+						</div>
+						<div class="dropdown">
+							<a href="javascript:void(0);" class="btn btn-primary btn-sm btn-wave waves-effect waves-light" data-bs-toggle="dropdown" aria-expanded="false">
+								@_localization.GetKey("Sırala")<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a class="dropdown-item" href="javascript:void(0);">@_localization.GetKey("Yeni")</a></li>
+								<li><a class="dropdown-item" href="javascript:void(0);">@_localization.GetKey("Popüler")</a></li>
+								<li>
+									<a class="dropdown-item" href="javascript:void(0);">@_localization.GetKey("Alakalı")</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-bordered text-nowrap mb-0" id="projectSummary">
+						<thead>
+							<tr>
+								<th class="wd-5p tx-center fw-bold">@_localization.GetKey("Sıra")</th>
+								<th class="wd-25p fw-bold">@_localization.GetKey("Başlık")</th>
+								<th class="text-center fw-bold">@_localization.GetKey("Süreç")</th>
+								<th class="text-center fw-bold">@_localization.GetKey("Durum")</th>
+								<th class="fw-bold">@_localization.GetKey("Başlangıç Tarihi")</th>
+								<th class="fw-bold">@_localization.GetKey("Bitiş Tarihi")</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="tx-center">1</td>
+								<td><span class="tx-14">Home Page</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-primary btn-sm">76%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-info-transparent text-info">
+										in
+										progress
+									</span>
+								</td>
+								<td>14-04-2022</td>
+								<td>20-07-2022</td>
+							</tr>
+							<tr>
+								<td class="tx-center">2</td>
+								<td><span class="tx-14">Landing Design</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-warning btn-sm">76%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-info-transparent text-info">
+										in
+										progress
+									</span>
+								</td>
+								<td>20-04-2022</td>
+								<td>15-08-2022</td>
+							</tr>
+							<tr>
+								<td class="tx-center">3</td>
+								<td><span class="tx-14">New Template Design</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-info btn-sm">96%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-danger-transparent text-danger">pending</span>
+								</td>
+								<td>29-05-2022</td>
+								<td>20-09-2022</td>
+							</tr>
+							<tr>
+								<td class="tx-center">4</td>
+								<td><span class="tx-14">HR Management Template Design</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-success btn-sm">76%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-info-transparent text-info">
+										in
+										progress
+									</span>
+								</td>
+								<td>18-04-2022</td>
+								<td>14-09-2022</td>
+							</tr>
+							<tr>
+								<td class="tx-center">5</td>
+								<td><span class="tx-14">Designing New Template</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-primary btn-sm">53%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-success-transparent text-success">completed</span>
+								</td>
+								<td>11-04-2022</td>
+								<td>10-07-2022</td>
+							</tr>
+							<tr>
+								<td class="tx-center">6</td>
+								<td><span class="tx-14">Documentation Project</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-danger btn-sm text-dsnger">96%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-info-transparent text-info">
+										in
+										progress
+									</span>
+								</td>
+								<td>18-04-2022</td>
+								<td>12-10-2022</td>
+							</tr>
+							<tr>
+								<td class="tx-center">7</td>
+								<td><span class="tx-14">Developing Backend</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-info btn-sm">49%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-success-transparent text-success">completed</span>
+								</td>
+								<td>12-04-2022</td>
+								<td>17-10-2022</td>
+							</tr>
+							<tr>
+								<td class="tx-center">8</td>
+								<td><span class="tx-14">Multipurpose Dashboard Template</span></td>
+								<td>
+									<div class="text-center">
+										<span class="btn btn-outline-success btn-sm text-seccess">82%</span>
+									</div>
+								</td>
+								<td class="text-center">
+									<span class="badge badge-sm rounded-pill bg-danger-transparent text-danger">pending</span>
+								</td>
+								<td>16-05-2022</td>
+								<td>27-10-2022</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex align-items-center">
+					<div>
+						5 Giriş Gösteriliyor <i class="bi bi-arrow-right ms-2 fw-semibold"></i>
+					</div>
+					<div class="ms-auto">
+						<nav aria-label="Page navigation" class="pagination-style-4">
+							<ul class="pagination mb-0">
+								<li class="page-item disabled">
+									<a class="page-link" href="javascript:void(0);">
+										@_localization.GetKey("Önceki")
+									</a>
+								</li>
+								<li class="page-item active">
+									<a class="page-link"
+									   href="javascript:void(0);">1</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link"
+									   href="javascript:void(0);">2</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link text-primary" href="javascript:void(0);">
+										@_localization.GetKey("Sonraki")
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- ROW-3 End -->

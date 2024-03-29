@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alakalı" xml:space="preserve">
+    <value>Alakalı</value>
+  </data>
+  <data name="Ana Ekran" xml:space="preserve">
+    <value>Ana Ekran</value>
+  </data>
+  <data name="Ana Sayfa" xml:space="preserve">
+    <value>Ana Sayfa</value>
+  </data>
+  <data name="Ara" xml:space="preserve">
+    <value>Ara</value>
+  </data>
+  <data name="Arama Yapın" xml:space="preserve">
+    <value>Arama Yapın</value>
+  </data>
+  <data name="Arkadaşlar" xml:space="preserve">
+    <value>Arkadaşlar</value>
+  </data>
+  <data name="Ay" xml:space="preserve">
+    <value>Ay</value>
+  </data>
+  <data name="Ayarlar" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Aydınlık" xml:space="preserve">
+    <value>Aydınlık</value>
+  </data>
+  <data name="Açık" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="Açık Başlık" xml:space="preserve">
+    <value>Açık Başlık</value>
+  </data>
+  <data name="Açık Menü" xml:space="preserve">
+    <value>Açık Menü</value>
+  </data>
+  <data name="Bağımsız" xml:space="preserve">
+    <value>Bağımsız</value>
+  </data>
+  <data name="Başlangıç Tarihi" xml:space="preserve">
+    <value>Başlangıç Tarihi</value>
+  </data>
+  <data name="Başlık" xml:space="preserve">
+    <value>Başlık</value>
+  </data>
+  <data name="Başlık Pozisyonları" xml:space="preserve">
+    <value>Başlık Pozisyonları</value>
+  </data>
+  <data name="Başlık Renkleri" xml:space="preserve">
+    <value>Başlık Renkleri</value>
+  </data>
+  <data name="Bildirimler" xml:space="preserve">
+    <value>Bildirimler</value>
+  </data>
+  <data name="Birincil Tema" xml:space="preserve">
+    <value>Birincil Tema</value>
+  </data>
+  <data name="Bitiş Tarihi" xml:space="preserve">
+    <value>Bitiş Tarihi</value>
+  </data>
+  <data name="Bize Mesaj Gönderin." xml:space="preserve">
+    <value>Bize Mesaj Gönderin.</value>
+  </data>
+  <data name="Bizimle İletişime Geçin" xml:space="preserve">
+    <value>Bizimle İletişime Geçin</value>
+  </data>
+  <data name="Blog Sayfası" xml:space="preserve">
+    <value>Blog Sayfası</value>
+  </data>
+  <data name="Buradan Ara" xml:space="preserve">
+    <value>Buradan Ara</value>
+  </data>
+  <data name="Bütün Gönderileri Gör" xml:space="preserve">
+    <value>Bütün Gönderileri Gör</value>
+  </data>
+  <data name="Daha Fazla Bilgi" xml:space="preserve">
+    <value>Daha Fazla Bilgi</value>
+  </data>
+  <data name="Detaylı Yazılar" xml:space="preserve">
+    <value>Detaylı Yazılar</value>
+  </data>
+  <data name="Değişken Başlık" xml:space="preserve">
+    <value>Değişken Başlık</value>
+  </data>
+  <data name="Değişken Menü" xml:space="preserve">
+    <value>Değişken Menü</value>
+  </data>
+  <data name="Dikey" xml:space="preserve">
+    <value>Dikey</value>
+  </data>
+  <data name="Dikey ve Yatay Menü Stilleri" xml:space="preserve">
+    <value>Dikey ve Yatay Menü Stilleri</value>
+  </data>
+  <data name="Durum" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="Etiketler" xml:space="preserve">
+    <value>Etiketler</value>
+  </data>
+  <data name="Gelen Kutusu" xml:space="preserve">
+    <value>Gelen Kutusu</value>
+  </data>
+  <data name="Genel" xml:space="preserve">
+    <value>Genel</value>
+  </data>
+  <data name="Giriş" xml:space="preserve">
+    <value>Giriş</value>
+  </data>
+  <data name="Girişler" xml:space="preserve">
+    <value>Girişler</value>
+  </data>
+  <data name="Gönderi Açıklamaları" xml:space="preserve">
+    <value>Gönderi Açıklamaları</value>
+  </data>
+  <data name="Gönderiler" xml:space="preserve">
+    <value>Gönderiler</value>
+  </data>
+  <data name="Göster" xml:space="preserve">
+    <value>Göster</value>
+  </data>
+  <data name="Gün" xml:space="preserve">
+    <value>Gün</value>
+  </data>
+  <data name="Güncel Yazılar" xml:space="preserve">
+    <value>Güncel Yazılar</value>
+  </data>
+  <data name="Hakkımızda" xml:space="preserve">
+    <value>Hakkımızda</value>
+  </data>
+  <data name="Hepsini Gör" xml:space="preserve">
+    <value>Hepsini Gör</value>
+  </data>
+  <data name="Hepsini Okundu İşaretle" xml:space="preserve">
+    <value>Hepsini Okundu İşaretle</value>
+  </data>
+  <data name="Hesap Ayarları" xml:space="preserve">
+    <value>Hesap Ayarları</value>
+  </data>
+  <data name="Kapalı" xml:space="preserve">
+    <value>Kapalı</value>
+  </data>
+  <data name="Kapalı Başlık" xml:space="preserve">
+    <value>Kapalı Başlık</value>
+  </data>
+  <data name="Kapalı Menü" xml:space="preserve">
+    <value>Kapalı Menü</value>
+  </data>
+  <data name="Karanlık" xml:space="preserve">
+    <value>Karanlık</value>
+  </data>
+  <data name="Kategoriler" xml:space="preserve">
+    <value>Kategoriler</value>
+  </data>
+  <data name="Kaydırılabilir" xml:space="preserve">
+    <value>Kaydırılabilir</value>
+  </data>
+  <data name="Klasik" xml:space="preserve">
+    <value>Klasik</value>
+  </data>
+  <data name="Klasik Menü" xml:space="preserve">
+    <value>Klasik Menü</value>
+  </data>
+  <data name="Konu" xml:space="preserve">
+    <value>Konu</value>
+  </data>
+  <data name="Kullanıcılar" xml:space="preserve">
+    <value>Kullanıcılar</value>
+  </data>
+  <data name="Layout Genişliği Stilleri" xml:space="preserve">
+    <value>Layout Genişliği Stilleri</value>
+  </data>
+  <data name="Mail Adresiniz" xml:space="preserve">
+    <value>Mail Adresiniz</value>
+  </data>
+  <data name="Menü ile Arkaplan Resmi" xml:space="preserve">
+    <value>Menü ile Arkaplan Resmi</value>
+  </data>
+  <data name="Menü Pozisyonları" xml:space="preserve">
+    <value>Menü Pozisyonları</value>
+  </data>
+  <data name="Menü Renkleri" xml:space="preserve">
+    <value>Menü Renkleri</value>
+  </data>
+  <data name="Mesaj Gönder" xml:space="preserve">
+    <value>Mesaj Gönder</value>
+  </data>
+  <data name="Mesajlar" xml:space="preserve">
+    <value>Mesajlar</value>
+  </data>
+  <data name="Mesajınız" xml:space="preserve">
+    <value>Mesajınız</value>
+  </data>
+  <data name="Modern" xml:space="preserve">
+    <value>Modern</value>
+  </data>
+  <data name="Not: Renk Başlığını değiştirmek istiyorsanız, Temanın Ana renk seçicisinin altından dinamik olarak değiştirin" xml:space="preserve">
+    <value>Not: Renk Başlığını değiştirmek istiyorsanız, Temanın Ana renk seçicisinin altından dinamik olarak değiştirin</value>
+  </data>
+  <data name="Not: Renk Menüsünü değiştirmek istiyorsanız, Temanın Ana renk seçicisinin altından dinamik olarak değiştirin" xml:space="preserve">
+    <value>Not: Renk Menüsünü değiştirmek istiyorsanız, Temanın Ana renk seçicisinin altından dinamik olarak değiştirin</value>
+  </data>
+  <data name="Popüler" xml:space="preserve">
+    <value>Popüler</value>
+  </data>
+  <data name="Profil" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profili Düzenle" xml:space="preserve">
+    <value>Profili Düzenle</value>
+  </data>
+  <data name="Renkli Başlık" xml:space="preserve">
+    <value>Renkli Başlık</value>
+  </data>
+  <data name="Renkli Menü" xml:space="preserve">
+    <value>Renkli Menü</value>
+  </data>
+  <data name="Sabit" xml:space="preserve">
+    <value>Sabit</value>
+  </data>
+  <data name="Sabit Menü" xml:space="preserve">
+    <value>Sabit Menü</value>
+  </data>
+  <data name="Saydam Başlık" xml:space="preserve">
+    <value>Saydam Başlık</value>
+  </data>
+  <data name="Saydam Menü" xml:space="preserve">
+    <value>Saydam Menü</value>
+  </data>
+  <data name="Sayfa Stili" xml:space="preserve">
+    <value>Sayfa Stili</value>
+  </data>
+  <data name="Sağdan Sola" xml:space="preserve">
+    <value>Sağdan Sola</value>
+  </data>
+  <data name="Soldan Sağa" xml:space="preserve">
+    <value>Soldan Sağa</value>
+  </data>
+  <data name="Son Gönderi" xml:space="preserve">
+    <value>Son Gönderi</value>
+  </data>
+  <data name="Son Gönderiler" xml:space="preserve">
+    <value>Son Gönderiler</value>
+  </data>
+  <data name="Sonraki" xml:space="preserve">
+    <value>Sonraki</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Süreç" xml:space="preserve">
+    <value>Süreç</value>
+  </data>
+  <data name="Sıfırla" xml:space="preserve">
+    <value>Sıfırla</value>
+  </data>
+  <data name="Sıra" xml:space="preserve">
+    <value>Sıra</value>
+  </data>
+  <data name="Sırala" xml:space="preserve">
+    <value>Sırala</value>
+  </data>
+  <data name="Tarihler" xml:space="preserve">
+    <value>Tarihler</value>
+  </data>
+  <data name="Tema Arkaplanı" xml:space="preserve">
+    <value>Tema Arkaplanı</value>
+  </data>
+  <data name="Tema Ayarları" xml:space="preserve">
+    <value>Tema Ayarları</value>
+  </data>
+  <data name="Tema Sayfa Modu" xml:space="preserve">
+    <value>Tema Sayfa Modu</value>
+  </data>
+  <data name="Türkçe" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="Vurgulu Menü" xml:space="preserve">
+    <value>Vurgulu Menü</value>
+  </data>
+  <data name="Vurgulu İkon" xml:space="preserve">
+    <value>Vurgulu İkon</value>
+  </data>
+  <data name="Yan menü Stili" xml:space="preserve">
+    <value>Yan menü Stili</value>
+  </data>
+  <data name="Yatay" xml:space="preserve">
+    <value>Yatay</value>
+  </data>
+  <data name="Yazılan Son Yazılar" xml:space="preserve">
+    <value>Yazılan Son Yazılar</value>
+  </data>
+  <data name="Yeni" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
+  <data name="Yükleyici" xml:space="preserve">
+    <value>Yükleyici</value>
+  </data>
+  <data name="Yıl" xml:space="preserve">
+    <value>Yıl</value>
+  </data>
+  <data name="Çizgili Ekran" xml:space="preserve">
+    <value>Çizgili Ekran</value>
+  </data>
+  <data name="Çizgisiz Ekran" xml:space="preserve">
+    <value>Çizgisiz Ekran</value>
+  </data>
+  <data name="Çıkış Yap" xml:space="preserve">
+    <value>Çıkış Yap</value>
+  </data>
+  <data name="Önceki" xml:space="preserve">
+    <value>Önceki</value>
+  </data>
+  <data name="İkili Menü" xml:space="preserve">
+    <value>İkili Menü</value>
+  </data>
+  <data name="İkon Kaplaması" xml:space="preserve">
+    <value>İkon Kaplaması</value>
+  </data>
+  <data name="İkon Yazısı" xml:space="preserve">
+    <value>İkon Yazısı</value>
+  </data>
+  <data name="İletişim" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="İletişim Yollarımız" xml:space="preserve">
+    <value>İletişim Yollarımız</value>
+  </data>
+  <data name="İngilizce" xml:space="preserve">
+    <value>İngilizce</value>
+  </data>
+  <data name="İsminiz" xml:space="preserve">
+    <value>İsminiz</value>
+  </data>
+  <data name="İşaretli Menü" xml:space="preserve">
+    <value>İşaretli Menü</value>
+  </data>
+  <data name="İşaretli İkon" xml:space="preserve">
+    <value>İşaretli İkon</value>
+  </data>
+</root>
